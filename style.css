@@ -170,6 +170,8 @@ header.sticky{
     padding: 16px 16%
 }
 
+/*----------------------------------this is about section -------------------------*/
+
 .about{
     background: var(--second-bg-color);
     display :grid;
@@ -444,6 +446,10 @@ form .send-btn:hover {
         --hl-font: 3.5rem;
         .about{
             grid-template: unset;
+        }
+        .about-image img{
+             width: 340px%;
+            height: 340px%;
         }
 
 

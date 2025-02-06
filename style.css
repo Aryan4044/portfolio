@@ -442,6 +442,10 @@ form .send-btn:hover {
 
     :root {
         --hl-font: 3.5rem;
+        .about{
+            grid-template: unset;
+        }
+
 
         . social {
             margin-bottom: 20px;

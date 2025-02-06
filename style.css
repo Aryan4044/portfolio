@@ -448,8 +448,8 @@ form .send-btn:hover {
             grid-template: unset;
         }
         .about-image img{
-             width: 340px%;
-            height: 340px%;
+             width: 340px;
+            height: 340px;
         }
 
 

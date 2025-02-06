@@ -402,7 +402,7 @@ form .send-btn:hover {
     }
     .hero{
         height: 90vh;
-        background-position: center;
+        background-position: left;
 
     }
 }
@@ -448,6 +448,7 @@ form .send-btn:hover {
             grid-template: unset;
         }
         .about-image img{
+            width:50%;
              width: 340px;
             height: 340px;
         }

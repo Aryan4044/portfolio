@@ -246,7 +246,7 @@
             <img src="./img/port-6.jpg"alt="">
             <div class="main-row">
                 <div class=row-text">
-                    <h5>Esp 8266 rver </h5>
+                    <h5>Esp 8266 rover </h5>
                 </div>
                 <div class="row-icon">
                     <i class="ri-github-fill"></i>
@@ -270,15 +270,55 @@
     </div>
 
     <div class="contact-form" data-aos="zoom-in">
-        <form action="">
-            <input type="text" placeholder="name" required>
-            <input type="email" placeholder="email address" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="write message here" required></textarea>
-            <input type="submit" value=" send message" class="send-btn">
+<form id="my-form" action="https://formspree.io/f/xnnjbqza" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" cols="30" rows="10" placeholder="Write message here" required></textarea>
+            <button type="submit" class="send-btn">Send Message</button>
         </form>
+
+        <script>
+            const form = document.getElementById('my-form');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault(); // Prevent default form submission
+
+                const button = event.submitter; // Get the submit button
+                button.disabled = true; // Disable the button to prevent multiple submissions
+                button.textContent = "Sending..."; // Change the button text
+
+                const formData = new FormData(form); // Create FormData object
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData, // Send FormData directly
+                        headers: {
+                            'Accept': 'application/json' // Important for Formspree
+                        }
+                    });
+
+                    if (response.ok) {
+                        button.textContent = "Message Sent!";
+                        form.reset(); // Clear the form
+                    } else {
+                        const errorData = await response.json(); // Try to get error details
+                        console.error("Form submission error:", errorData);
+                        button.textContent = "Error Sending";
+                        alert("There was an error submitting the form. Please try again."); // Or display a more user-friendly message.
+                    }
+                } catch (error) {
+                    console.error("Fetch error:", error);
+                    button.textContent = "Error Sending";
+                    alert("An error occurred. Please try again later."); // Generic error message
+                } finally {
+                    button.disabled = false; // Re-enable the button
+                }
+            });
+        </script>
+
     </div>
 </section>
-
 
 
 <script src="./script.js"></script>

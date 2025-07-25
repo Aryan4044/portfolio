@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll from particles */
+            position: relative; /* For positioning the canvas */
+            min-height: 100vh; /* Ensure body takes full height */
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); /* Dark gradient background */
+        }
+
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send canvas to the background */
+        }
+
+        /* Custom styles for the modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            width: 90%;
+            max-width: 900px; /* Max width for the modal */
+            height: 90%;
+            max-height: 800px; /* Max height for the modal */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ensure content inside doesn't overflow rounded corners */
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.open .modal-content {
+            transform: translateY(0);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0; /* Tailwind gray-200 */
+        }
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c; /* Tailwind gray-900 */
+        }
+        .modal-close-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #4a5568; /* Tailwind gray-600 */
+            transition: color 0.2s ease;
+        }
+        .modal-close-button:hover {
+            color: #2d3748; /* Tailwind gray-800 */
+        }
+        .modal-body {
+            flex-grow: 1;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <section id="research-papers" class="py-16 px-4 sm:px-6 lg:px-8 relative z-0">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 rounded-lg p-4 bg-gray-800 bg-opacity-70 shadow-md">
+                My Research Papers
+            </h2>
+
+
+
+            <!-- Research Paper 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                    <a href="https://zenodo.org/records/15992679?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjAwZTMwZTMwLTZjYTAtNDAyOC04ZDVjLWVkZGZhNDI1NWU4NiIsImRhdGEiOnt9LCJyYW5kb20iOiJiYTIzMWIxOTAwNjBhZWNkMGZiMmI4MGViYjQ5NmNkMiJ9.DSa0EO0EV9oAKsKQ2xw_pgxyzLH0950oOsyfGWcH4edLO-z4BFWlOoiwbHMt-XmfsDNlzaGNwWqpXNLledNfkQ" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 paper-link">
+                        Entropy-Enhanced Random Number Generation
+                    </a>
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This paper proposes a lightweight hybrid RNG architecture that fuses a software PRNG with analog noise sampled via a low-cost Arduino microcontroller. Our design uses bitwise XOR and SHA-256 hashing to produce output with enhanced randomness approaching the ideal of 8 bits of Shannon entropy per byte – making it highly suitable for real-time embedded and IoT security. Experimental evaluation confirms substantial improvements in randomness quality and resilience to seed compromise compared to standalone solutions.
+                </p>
+                <div class="flex flex-wrap items-center justify-between text-sm text-gray-500">
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Published In:</span> Journal Name / Conference Proceedings
+                    </span>
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Date:</span> January 2023
+                    </span>
+                    <button data-paper-url="./pdf/Entropy-Enhanced Random Number Generation.pdf" data-paper-title="Entropy-Enhanced Random Number Generation" class="open-modal-btn inline-flex items-center px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors duration-200 shadow-md">
+                        Read Paper
+                        <!-- Heroicons - Document Download -->
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Research Paper 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                    <a href="./pdf/retropie .pdf" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 paper-link">
+                         Re-living your childhood: Retropie 
+                    </a>
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This document explores the nostalgic joy of 90s gaming, contrasting it with modern gaming's focus on intense realism. It presents RetroPie as a solution to revisit classic games on a single device, offering a vast library of titles. The guide also details how to integrate open-source remakes as "Ports" for enhanced retro experiences. Quick steps for installing games on RetroPie are provided, covering game selection, checking RetroPie Ports, manual installation processes, and enabling the "Ports" section in Emulation Station to play the games
+                </p>
+                <div class="flex flex-wrap items-center justify-between text-sm text-gray-500">
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Published In:</span> COETA MAGAZINE
+                    </span>
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Date:</span> May 2025
+                    </span>
+                    <button data-paper-url="./pdf/retropie .pdf" data-paper-title="RetroPie" class="open-modal-btn inline-flex items-center px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors duration-200 shadow-md">
+                        Read Paper
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- Research Paper 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                    <a href="./pdf/The Rise of Artificial Intelligence (1).pdf" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 paper-link">
+                        Rise of Artificial Intelligence: A Deep Dive into Data Selection and Training
+                    </a>
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This article discusses key insights into Artificial Intelligence (AI) , focusing on the crucial aspects of dataset selection and training. It defines AI as a broad field aiming for human-like intelligence in machines, with Machine Learning (ML) as its subset where machines learn from data without explicit programming. The three main methods of ML—supervised, unsupervised, and reinforcement learning—are covered. The document emphasizes that data is crucial for AI/ML , detailing factors for selecting the right dataset (relevance, size, quality, diversity) and categorizing data into training, validation, and test sets for effective model development.
+                </p>
+                <div class="flex flex-wrap items-center justify-between text-sm text-gray-500">
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Published In:</span> COETA MAGAZINE
+                    </span>
+                    <span class="mr-4 mb-2 sm:mb-0">
+                        <span class="font-medium">Date:</span> Feb 2025 
+                    </span>
+                    <button data-paper-url="./pdf/The Rise of Artificial Intelligence (1).pdf" data-paper-title="Rise of Artificial Intelligence: A Deep Dive into Data Selection and Training" class="open-modal-btn inline-flex items-center px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors duration-200 shadow-md">
+                        Read Paper
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+            
+
+            <p class="text-center text-gray-200 mt-12 text-lg">
+                For more details or collaborations, feel free to <a href="#contact" class="text-blue-400 hover:text-blue-600 font-medium">contact me</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Modal Structure -->
+    <div id="paperModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <button class="modal-close-button" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="paperViewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openModalButtons = document.querySelectorAll('.open-modal-btn');
+            const paperModal = document.getElementById('paperModal');
+            const closeModalButton = document.getElementById('closeModal');
+            const paperViewer = document.getElementById('paperViewer');
+            const modalTitle = document.getElementById('modalTitle');
+
+            // Function to open the modal
+            function openModal(url, title) {
+                paperViewer.src = url;
+                modalTitle.textContent = title;
+                paperModal.classList.add('open');
+            }
+
+            // Function to close the modal
+            function closeModal() {
+                paperModal.classList.remove('open');
+                paperViewer.src = ''; // Clear the iframe src to stop any media
+            }
+
+            // Event listeners for opening the modal
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const paperUrl = event.currentTarget.dataset.paperUrl;
+                    const paperTitle = event.currentTarget.dataset.paperTitle;
+                    openModal(paperUrl, paperTitle);
+                });
+            });
+
+            // Event listener for closing the modal via button
+            closeModalButton.addEventListener('click', closeModal);
+
+            // Event listener for closing the modal by clicking outside
+            paperModal.addEventListener('click', (event) => {
+                if (event.target === paperModal) {
+                    closeModal();
+                }
+            });
+
+            // Optional: Close modal with Escape key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && paperModal.classList.contains('open')) {
+                    closeModal();
+                }
+            });
+
+            // Particle animation script
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const numParticles = 100;
+            const maxDistance = 100; // Max distance for lines between particles
+
+            // Set canvas size
+            function setCanvasSize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            // Particle constructor
+            function Particle(x, y) {
+                this.x = x || Math.random() * canvas.width;
+                this.y = y || Math.random() * canvas.height;
+                this.radius = Math.random() * 1.5 + 0.5; // Smaller particles
+                this.speedX = (Math.random() - 0.5) * 0.5; // Slower movement
+                this.speedY = (Math.random() - 0.5) * 0.5; // Slower movement
+                this.alpha = Math.random() * 0.5 + 0.2; // Softer particles
+            }
+
+            Particle.prototype.update = function() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Wrap particles around the screen
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            };
+
+            Particle.prototype.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+                ctx.fill();
+            };
+
+            // Initialize particles
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < numParticles; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            // Animation loop
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+
+                    // Draw lines between nearby particles
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < maxDistance) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${((maxDistance - distance) / maxDistance) * 0.15})`; // Faint lines
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animateParticles);
+            }
+
+            // Event listener for window resize
+            window.addEventListener('resize', () => {
+                setCanvasSize();
+                initParticles(); // Re-initialize particles on resize
+            });
+
+            // Initial setup
+            setCanvasSize();
+            initParticles();
+            animateParticles();
+        });
+    </script>
+</body>
+</html>

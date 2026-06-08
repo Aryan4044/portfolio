@@ -181,7 +181,7 @@ const PROJECTS = [
     title:  'Rocky AI Robot (On going)',
     desc:   'Raspberry Pi powered AI assistant robot with real-time voice and custom personality engine.',
     tags:   ['Raspberry Pi', 'Python', 'LLM'],
-    img:    './Image-Assets/Projects/Rocky.png',
+    img:    './Image-Assets/Projects/rocky.png',
     github: 'https://github.com/aryan4044/rocky-ai',
     demo:   '',
   },
@@ -189,7 +189,7 @@ const PROJECTS = [
     "title": "Pulse Pressurized Irrigation System",
     "desc": "An automated, precision irrigation system that utilizes an ESP microcontroller and various sensors to manage pulse-pressurized watering cycles with real-time pressure control and Blynk IoT cloud integration.",
     "tags": ["ESP32", "Blynk IoT", "PID Control", "Pressure Sensors", "Embedded C++", "Smart Agriculture"],
-    "img": "./Image-Assets/Projects/Pulse.jpg",
+    "img": "./Image-Assets/Projects/pulse.jpg",
     "github": "https://github.com/aryan4044/pulse-pressurized-irrigation",
     "demo": "https://your-demo-link.com"
   },
@@ -206,7 +206,7 @@ const PROJECTS = [
       "title": "Cyber Car",
       "desc": "An autonomous RC vehicle designed to covertly enter properties and execute network deauthentication attacks.",
       "tags": ["Cybersecurity", "IoT", "Embedded Systems", "Wi-Fi Hacking"],
-      "img": "./Image-Assets/Projects/Cyber-Car.jpg",
+      "img": "./Image-Assets/Projects/Cyber-car.jpg",
       "github": "https://github.com/aryan4044/cyber-car",
       "demo": "https://your-demo-link.com"
     },

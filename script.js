@@ -181,7 +181,7 @@ const PROJECTS = [
     title:  'Rocky AI Robot (On going)',
     desc:   'Raspberry Pi powered AI assistant robot with real-time voice and custom personality engine.',
     tags:   ['Raspberry Pi', 'Python', 'LLM'],
-    img:    'Image-Assets/Projects/Rocky.png',          // ← drop your photo in the images/ folder
+    img:    'Image-Assets/Projects/Rocky.png',
     github: 'https://github.com/aryan4044/rocky-ai',
     demo:   '',
   },
@@ -189,7 +189,7 @@ const PROJECTS = [
     "title": "Pulse Pressurized Irrigation System",
     "desc": "An automated, precision irrigation system that utilizes an ESP microcontroller and various sensors to manage pulse-pressurized watering cycles with real-time pressure control and Blynk IoT cloud integration.",
     "tags": ["ESP32", "Blynk IoT", "PID Control", "Pressure Sensors", "Embedded C++", "Smart Agriculture"],
-    "img": "Image-Assets/Projects/Pulse.jpg",
+    "img": "./Image-Assets/Projects/Pulse.jpg",
     "github": "https://github.com/aryan4044/pulse-pressurized-irrigation",
     "demo": "https://your-demo-link.com"
   },
@@ -198,7 +198,7 @@ const PROJECTS = [
       "title": "Facial expression recognization",
       "desc": "Trained a custom AI model using YOLOv11 to recognize facial expressions in real-time.",
       "tags": ["YOLOv11", "Computer Vision", "PyTorch", "Python"],
-      "img": "Image-Assets/Projects/Facial.jpg",
+      "img": "./Image-Assets/Projects/Facial.jpg",
       "github": "https://github.com/aryan4044/ai-automation",
       "demo": "https://your-demo-link.com"
     },

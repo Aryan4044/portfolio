@@ -411,18 +411,21 @@
 
       <!-- Right form -->
       <div class="contact-right">
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/xnnjbqza" method="POST" novalidate>
+
+
+
           <div class="form-field fade-up">
             <label class="form-label" for="name">Name</label>
-            <input class="form-input" id="name" type="text" required placeholder="Your name" />
-          </div>
+            <input class="form-input" id="name"    type="text"  name="name"    required placeholder="Your name" />
+           </div>
           <div class="form-field fade-up" style="transition-delay:.05s">
             <label class="form-label" for="email">Email</label>
-            <input class="form-input" id="email" type="email" required placeholder="you@domain.com" />
-          </div>
+            <input class="form-input" id="email"   type="email" name="email"   required placeholder="you@domain.com" />
+           </div>
           <div class="form-field fade-up" style="transition-delay:.1s">
             <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" required rows="5" placeholder="Tell me about the build..."></textarea>
+            <textarea class="form-textarea" id="message" name="message" required rows="5" placeholder="Tell me about the build..."></textarea>
           </div>
           <div class="fade-up" style="transition-delay:.15s">
             <button type="submit" class="btn-submit gradient-blue" id="submit-btn">

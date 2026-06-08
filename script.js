@@ -391,9 +391,97 @@ TIMELINE.forEach((t, i) => {
 /* ════════════════════════════════════
    CONTACT FORM
    ════════════════════════════════════ */
-document.getElementById('contact-form').addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.opacity = '0.8';
-});
+(function () {
+  const form    = document.getElementById('contact-form');
+  const btn     = document.getElementById('submit-btn');
+  const icon    = document.getElementById('send-icon');
+
+  /* ── Inline validation helpers ── */
+  function showError(id, msg) {
+    const input = document.getElementById(id);
+    input.classList.add('input-error');
+    let hint = input.parentElement.querySelector('.form-hint');
+    if (!hint) {
+      hint = document.createElement('span');
+      hint.className = 'form-hint';
+      input.parentElement.appendChild(hint);
+    }
+    hint.textContent = msg;
+  }
+
+  function clearErrors() {
+    form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+    form.querySelectorAll('.form-hint').forEach(el => el.remove());
+  }
+
+  function validate() {
+    let ok = true;
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name)                              { showError('name',    'Name is required.');          ok = false; }
+    if (!email)                             { showError('email',   'Email is required.');          ok = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    { showError('email',   'Enter a valid email.');        ok = false; }
+    if (!message || message.length < 10)   { showError('message', 'Message must be ≥ 10 chars.'); ok = false; }
+    return ok;
+  }
+
+  /* ── Button state helpers ── */
+  function setState(state) {
+    const states = {
+      idle:    { text: 'Send Message',   cls: '',             disabled: false },
+      sending: { text: 'Sending…',       cls: 'btn-sending',  disabled: true  },
+      success: { text: 'Message Sent ✓', cls: 'btn-success',  disabled: true  },
+      error:   { text: 'Try Again',      cls: 'btn-error',    disabled: false },
+    };
+    const s = states[state];
+    btn.textContent = s.text;
+    if (icon && state === 'idle') btn.appendChild(icon);
+    btn.className = btn.className.replace(/btn-sending|btn-success|btn-error/g, '').trim();
+    if (s.cls) btn.classList.add(s.cls);
+    btn.disabled = s.disabled;
+  }
+
+  /* ── Submit ── */
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    clearErrors();
+    if (!validate()) return;
+
+    setState('sending');
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method:  'POST',
+        body:    formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        setState('success');
+        form.reset();
+        setTimeout(() => setState('idle'), 4000);
+      } else {
+        const err = await res.json().catch(() => ({}));
+        console.error('Form error:', err);
+        setState('error');
+      }
+    } catch (err) {
+      console.error('Network error:', err);
+      setState('error');
+    }
+  });
+
+  /* ── Clear error styling on re-type ── */
+  form.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('input', () => {
+      el.classList.remove('input-error');
+      const hint = el.parentElement.querySelector('.form-hint');
+      if (hint) hint.remove();
+    });
+  });
+})();

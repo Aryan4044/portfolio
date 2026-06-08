@@ -181,7 +181,7 @@ const PROJECTS = [
     title:  'Rocky AI Robot (On going)',
     desc:   'Raspberry Pi powered AI assistant robot with real-time voice and custom personality engine.',
     tags:   ['Raspberry Pi', 'Python', 'LLM'],
-    img:    'Image-Assets/Projects/Rocky.png',
+    img:    './Image-Assets/Projects/Rocky.png',
     github: 'https://github.com/aryan4044/rocky-ai',
     demo:   '',
   },
@@ -206,7 +206,7 @@ const PROJECTS = [
       "title": "Cyber Car",
       "desc": "An autonomous RC vehicle designed to covertly enter properties and execute network deauthentication attacks.",
       "tags": ["Cybersecurity", "IoT", "Embedded Systems", "Wi-Fi Hacking"],
-      "img": "Image-Assets/Projects/Cyber-Car.jpg",
+      "img": "./Image-Assets/Projects/Cyber-Car.jpg",
       "github": "https://github.com/aryan4044/cyber-car",
       "demo": "https://your-demo-link.com"
     },

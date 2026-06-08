@@ -1,515 +1,480 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Bhad Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Bhad — Robotics Builder · AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- ══════════════════════════════════
+     MOUSE GLOW
+     ══════════════════════════════════ -->
+<div id="mouse-glow" aria-hidden="true"></div>
 
-    <header>
-        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Aryan-4044</a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-            <a href="#main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
-            <a href="#about"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
-            <a href="#skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Skills</a>
-            <a href="#services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Certifications</a>
-            <a href="#Projects" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Projects</a>
-            <a href="#contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+<!-- ══════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════ -->
+<header id="nav">
+  <div class="nav-inner">
+    <div class="nav-pill" id="nav-pill">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-badge gradient-blue">AB</span>
+        <span class="logo-name">Aryan Bhad</span>
+      </a>
+
+      <!-- Desktop links -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right side -->
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <a href="#contact" class="nav-cta gradient-blue">
+          Let's Build
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <div class="hamburger-lines">
+            <span id="hb1"></span>
+            <span id="hb2"></span>
+            <span id="hb3"></span>
+          </div>
+        </button>
+      </div>
+
+    </div><!-- /nav-pill -->
+  </div><!-- /nav-inner -->
+
+  <!-- Mobile dropdown -->
+  <nav id="mobile-menu" class="glass-strong" aria-label="Mobile navigation">
+    <a href="#home"           class="mobile-link">Home</a>
+    <a href="#about"          class="mobile-link">About</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#projects"       class="mobile-link">Projects</a>
+    <a href="#skills"         class="mobile-link">Skills</a>
+    <a href="#experience"     class="mobile-link">Experience</a>
+    <a href="#contact"        class="mobile-link">Contact</a>
+  </nav>
+</header>
+
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section id="home" aria-label="Hero">
+  <div class="hero-bg-grid bg-grid"   aria-hidden="true"></div>
+  <div class="hero-bg-radial"         aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <div class="hero-grid">
+
+    <!-- Left: text -->
+    <div>
+      <div class="hero-badge glass">
+        <span class="ping-dot" aria-hidden="true"></span>
+        Available for new builds — 2026
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="line1">Hello There,</span>
+        <span class="line2">I'm <span class="hero-name-highlight">Aryan Bhad</span></span>
+      </h1>
+
+      <p class="hero-tagline">
+        <span>Robotics Builder</span>
+        <span class="hero-dot" aria-hidden="true">●</span>
+        <span>AI Engineer</span>
+        <span class="hero-dot" aria-hidden="true">●</span>
+        <span>Embedded Systems</span>
+      </p>
+
+      <p class="hero-desc">
+        I design and build intelligent robots, embedded devices, and AI-powered systems —
+        bringing software, hardware, and machine learning together to solve real problems.
+      </p>
+
+      <div class="hero-btns">
+        <a href="https://wa.me/9284709411?text=HAY!%20saw%20your%20website%20wanted%20to%20work%20with%20you" class="btn-primary gradient-blue">
+          Contact ME
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://drive.google.com/file/d/19XtmCgCKrdJ6n1u-WAIUNSuuBZ_cw561/view?usp=drive_link" class="btn-secondary glass-strong">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+
+
+  </div><!-- /hero-grid -->
+</section>
+
+<!-- ══════════════════════════════════
+     STATS
+     ══════════════════════════════════ -->
+<section id="stats" aria-label="Stats">
+  <div class="stats-grid glass-strong">
+    <div class="stat-card fade-up">
+      <div class="stat-value"><span class="counter" data-target="15">0</span>+</div>
+      <p class="stat-label">Projects Completed</p>
+    </div>
+    <div class="stat-card fade-up" style="transition-delay:.08s">
+      <div class="stat-value"><span class="counter" data-target="4">0</span>+</div>
+      <p class="stat-label">AI Systems Built</p>
+    </div>
+    <div class="stat-card fade-up" style="transition-delay:.16s">
+      <div class="stat-value"><span class="counter" data-target="3">0</span>+</div>
+      <p class="stat-label">Research Initiatives</p>
+    </div>
+    <div class="stat-card fade-up" style="transition-delay:.24s">
+      <div class="stat-value"><span class="counter" data-target="1000">0</span>+</div>
+      <p class="stat-label">Hours of Development</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ABOUT
+     ══════════════════════════════════ -->
+<section id="about" aria-label="About">
+  <div class="about-grid">
+
+    <!-- Photo -->
+    <div class="fade-up">
+      <div class="about-img-wrap">
+        <div class="about-img-glow" aria-hidden="true"></div>
+        <div class="about-img-card glass-strong glow-border">
+          <img id="profile-img" src="" alt="Aryan Bhad" loading="lazy" />
+          <div class="about-img-overlay" aria-hidden="true"></div>
+          <div class="about-img-label">
+            <div class="about-img-role">Engineer · Builder</div>
+            <div class="about-img-name">Aryan Bhad</div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
 
+    <!-- Text -->
+    <div>
+      <div class="fade-up">
+        <span class="about-tag glass">About Me</span>
+      </div>
+      <div class="fade-up" style="transition-delay:.1s">
+        <h2 class="about-h2 gradient-text">Building the bridge between intelligence and the physical world.</h2>
+      </div>
+      <div class="fade-up" style="transition-delay:.2s">
+        <p class="about-p">I'm an Computer Science Engineer obsessed with how software, hardware, and AI come together. From hacking on Raspberry Pi to deploying large language models locally, I love turning ambitious ideas into working systems.</p>
+      </div>
+      <div class="fade-up" style="transition-delay:.3s">
+        <p class="about-p2">My work spans embedded devices, autonomous robotics, and AI-driven applications — built with a relentless focus on craft, performance, and real-world impact.</p>
+      </div>
 
-    <!--  Main Section  -->
-
-    <section class="main" id="main">
-        <div class="content">
-            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Hello, I'm <br><span>Aryan Bhad</span></h2>
-            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
-                <h3>Web Developer</h3>
-                <h3>Programmer</h3>
-                <h3>RoboticsExpert</h3>
-
-            </div>
-            <a href="https://wa.me/9284709411?text=HAY!%20saw%20your%20website%20wanted%20to%20work%20with%20you" class="btn" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">Contact ME</a>
-            <a href="https://drive.google.com/file/d/19XtmCgCKrdJ6n1u-WAIUNSuuBZ_cw561/view?usp=drive_link" class="btn" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">Download CV </a>
-            <div class="media-icons">
-                <a href="https://www.youtube.com/@developeraryan2225" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1200"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/aryan_40444/" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1300"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/aryan4044/" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1400"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Aryan4044" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1500"><i class="fab fa-github"></i></a>
-            </div>
+      <div class="highlights">
+        <div class="highlight-card glass fade-up" style="transition-delay:.35s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </span>
+          <span class="highlight-label">Raspberry Pi</span>
         </div>
-    </section>
-
-<!--  About Section -->
-
-    <section class="about" id="about">
-        <div class="title reveal">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+        <div class="highlight-card glass fade-up" style="transition-delay:.39s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44L4.5 7a2.5 2.5 0 0 1 5-1M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44L19.5 7a2.5 2.5 0 0 0-5-1"/></svg>
+          </span>
+          <span class="highlight-label">AI Assistants</span>
         </div>
-        <div class="content">
-            <div class="column col-left reveal">
-                <div class="img-card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
-                    <img src="Image/img1.jpg" alt="">
-                </div>
-            </div>
-            <div class="column col-right reveal">
-                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hey There! I am Aryan Bhad</h2>
-                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">I'm a software developer passionate about building innovative and efficient solutions. My expertise lies in the exciting intersection of robotics, Python programming, and web development. I thrive on creating intelligent systems, whether it's designing robots with Python or crafting user-friendly web applications. I'm a continuous learner, always eager to explore new technologies and tackle challenging projects. Let's connect and discuss how I can bring your ideas to life!.<br><br>I'm a versatile technologist with a passion for building innovative solutions. My expertise lies in robotics using AEC and MicroPython, web development with HTML and CSS, and managing Linux-based services and networks. I'm also proficient in backend development with C, Python, and Java.  My commitment to excellence is reflected in my certifications from industry leaders like Oracle, Cisco, Udemy, and LetsUpgrade, which validate my skills and demonstrate my dedication to continuous learning.</p>
-                <a href="#skills" class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">See more</a>
-            </div>
+        <div class="highlight-card glass fade-up" style="transition-delay:.43s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
+          </span>
+          <span class="highlight-label">Robotics</span>
         </div>
-    </section>
-
-<!-- Skill Section -->
-
-    <section class="skills" id="skills">
-        <div class="title">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My Skills</h2>
+        <div class="highlight-card glass fade-up" style="transition-delay:.47s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span class="highlight-label">Computer Vision</span>
         </div>
-        <div class="content">
-            <div class="column col-left">
-                <h2 class="content-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">My Skills and Experiences</h2>
-                <div class="paragraph-text" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">My expertise lies in building and deploying technology-driven solutions. I'm highly proficient in robotics using AEC and MicroPython, web development with HTML/CSS, and managing Linux-based services and networks. My skills in backend development with C, Python, and Java allow me to create robust and scalable applications.  I'm committed to leveraging my skills to achieve impactful results.</div>
-                <a href="#Projects" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">See Projects</a>
-            </div>
-            <div class="column col-right">
-                <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
-                        <span>Robotics (AEC/MicroPython)</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
-                </div>
-                <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
-                        <span>Web dev (HTML/CSS)</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
-                </div>
-                <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
-                        <span>Linux based Services </span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line javascript" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
-                </div>
-                <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
-                        <span>Networking</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="line python" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
-                </div>
-                <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
-                        <span>Backend (C/PYTHON/JAVA)</span>
-                        <span>65%</span>
-                    </div>
-                    <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
-                </div>
-            </div>
+        <div class="highlight-card glass fade-up" style="transition-delay:.51s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8z"/></svg>
+          </span>
+          <span class="highlight-label">LLM Apps</span>
         </div>
-    </section>
-
-    <!-- Services Section -->
-
-    <section class="services" id="services">
-        <div class="title">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My Certifications </h2>
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">My skills are backed by certifications from industry leaders like Oracle, Cisco, Udemy, and LetsUpgrade, validating my expertise and commitment to lifelong learning.</p>
+        <div class="highlight-card glass fade-up" style="transition-delay:.55s">
+          <span class="highlight-icon gradient-blue" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <span class="highlight-label">Embedded Systems</span>
         </div>
-        <div class="slide-container swiper">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-1"></span>
+      </div>
+    </div>
 
-                            <div class="card-image">
-                                <img src="images/oracle.png" alt="" class="card-img">
-                            </div>
-                        </div>
+  </div><!-- /about-grid -->
+</section>
 
-                        <div class="card-content">
-                            <h2 class="name">Oracle certified </h2>
-                            <p class="description">I am certified in AI and Generative AI by Oracle, showcasing my expertise in the cutting-edge field of artificial intelligence.</p>
+<!-- ══════════════════════════════════
+     CERTIFICATIONS
+     ══════════════════════════════════ -->
+<section id="certifications" aria-label="Certifications">
+  <div class="section-header">
+    <div class="fade-up"><span class="section-tag glass"><span class="section-tag-dot" aria-hidden="true"></span>Credentials</span></div>
+    <div class="fade-up" style="transition-delay:.1s"><h2 class="section-title gradient-text">Certifications &amp; Learning</h2></div>
+    <div class="fade-up" style="transition-delay:.15s"><p class="section-sub">Continuous learning across AI, embedded systems, and software engineering.</p></div>
+  </div>
+  <div class="certs-grid" id="certs-grid"></div>
+</section>
 
-                           <a href="https://drive.google.com/drive/folders/1fJewZG7zb3B5Q0FK0DYVaIj-IGg4Fskc?usp=sharing"> <button class="button" id="btn1">View Certifications</button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-2"></span>
+<!-- ══════════════════════════════════
+     PROJECTS
+     ══════════════════════════════════ -->
+<section id="projects" aria-label="Projects">
+  <div class="section-header">
+    <div class="fade-up"><span class="section-tag glass"><span class="section-tag-dot" aria-hidden="true"></span>Featured Work</span></div>
+    <div class="fade-up" style="transition-delay:.1s"><h2 class="section-title gradient-text">Projects</h2></div>
+    <div class="fade-up" style="transition-delay:.15s"><p class="section-sub">Intelligent systems, AI applications, and embedded experiments shipped recently.</p></div>
+  </div>
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
 
-                            <div class="card-image">
-                                <img src="images/IBM.png" alt="" class="card-img">
-                            </div>
-                        </div>
+<!-- ══════════════════════════════════
+     SKILLS
+     ══════════════════════════════════ -->
+<section id="skills" aria-label="Skills">
+  <div class="section-header">
+    <div class="fade-up"><span class="section-tag glass"><span class="section-tag-dot" aria-hidden="true"></span>Toolkit</span></div>
+    <div class="fade-up" style="transition-delay:.1s"><h2 class="section-title gradient-text">Skills &amp; Stack</h2></div>
+    <div class="fade-up" style="transition-delay:.15s"><p class="section-sub">The technologies I reach for when building intelligent, performant, and elegant systems.</p></div>
+  </div>
+  <div class="skills-grid" id="skills-grid"></div>
+</section>
 
-                        <div class="card-content">
-                            <h2 class="name">IBM</h2>
-                            <p class="description">I'm also certified in SQL, Relational Databases, and Data Science by IBM, further solidifying my data management and analysis capabilities.</p>
+<!-- ══════════════════════════════════
+     EXPERIENCE
+     ══════════════════════════════════ -->
+<section id="experience" aria-label="Experience">
+  <div class="section-header">
+    <div class="fade-up"><span class="section-tag glass"><span class="section-tag-dot" aria-hidden="true"></span>Journey</span></div>
+    <div class="fade-up" style="transition-delay:.1s"><h2 class="section-title gradient-text">Experience</h2></div>
+    <div class="fade-up" style="transition-delay:.15s"><p class="section-sub">Milestones in the ongoing build.</p></div>
+  </div>
+  <div class="timeline-wrap">
+    <div class="timeline-line" aria-hidden="true"></div>
+    <div class="timeline-items" id="timeline-items"></div>
+  </div>
+</section>
 
-                            <a href="https://drive.google.com/drive/folders/16Uzonm5cBdOX4eEUIv6X5i4fI_co-c1D?usp=sharing"><button class="button" id="btn2">View Certifications</button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-3"></span>
+<!-- ══════════════════════════════════
+     RESEARCH PAPERS
+     ══════════════════════════════════ -->
+<section id="research" aria-label="Research Papers">
+  <div class="section-header">
+    <div class="fade-up"><span class="section-tag glass"><span class="section-tag-dot" aria-hidden="true"></span>Academia</span></div>
+    <div class="fade-up" style="transition-delay:.1s"><h2 class="section-title gradient-text">Research Papers</h2></div>
+    <div class="fade-up" style="transition-delay:.15s"><p class="section-sub">Explorations at the intersection of AI, robotics, and embedded systems.</p></div>
+  </div>
 
-                            <div class="card-image">
-                                <img src="images/LU.png" alt="" class="card-img">
-                            </div>
-                        </div>
+  <div class="research-grid" id="research-grid">
 
-                        <div class="card-content">
-                            <h2 class="name">Lets  Bootcamps </h2>
-                            <p class="description">My commitment to continuous learning is evident through my participation in numerous bootcamps from LetsUpgrade, where I've honed my skills and expanded my knowledge in various technologies.</p>
+    <a href="https://zenodo.org/records/15992679?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjAwZTMwZTMwLTZjYTAtNDAyOC04ZDVjLWVkZGZhNDI1NWU4NiIsImRhdGEiOnt9LCJyYW5kb20iOiJiYTIzMWIxOTAwNjBhZWNkMGZiMmI4MGViYjQ5NmNkMiJ9.DSa0EO0EV9oAKsKQ2xw_pgxyzLH0950oOsyfGWcH4edLO-z4BFWlOoiwbHMt-XmfsDNlzaGNwWqpXNLledNfkQ" target="_blank" rel="noreferrer" class="research-card glass fade-up">
+      <div class="research-card-glow"></div>
+      <div class="research-top">
+        <span class="research-icon gradient-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span>
+        <span class="research-year">2024</span>
+      </div>
+      <h3 class="research-title">Entropy-Enhanced Random Number Generation</h3>
+      <p class="research-desc">A lightweight hybrid RNG architecture fusing a software PRNG with hardware-sampled analog noise via Arduino. Uses XOR and SHA-256 to deliver near-ideal Shannon entropy, ideal for real-time embedded and IoT security.</p>
+      <div class="research-tags">
+        <span class="research-tag">Hardware Security]`</span>
+        <span class="research-tag">Cryptography</span>
+        <span class="research-tag">IoT Security</span>
+      </div>
+      <div class="research-link">
+        Read Paper
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </div>
+    </a>
 
-                            <a href="https://drive.google.com/drive/folders/1ZXTQgtMxG5gQiGuHiqm6mgEh-zwIS8zK?usp=sharing"><button class="button" id="btn3">View Certifications</button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-4"></span>
+    <a href="./Reading/pdf/retropie .pdf" target="_blank" rel="noreferrer" class="research-card glass fade-up" style="transition-delay:.07s">
+      <div class="research-card-glow"></div>
+      <div class="research-top">
+        <span class="research-icon gradient-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span>
+        <span class="research-year">2024</span>
+      </div>
+      <h3 class="research-title"> Re-living your childhood: Retropie </h3>
+      <p class="research-desc">"A guide to 90s retro gaming on RetroPie, detailing how to install classic titles and integrate open-source remakes via EmulationStation Ports.</p>
+      <div class="research-tags">
+        <span class="research-tag">Raspberry pi</span>
+        <span class="research-tag">Emulation </span>
+        <span class="research-tag"> Hardware </span>
+      </div>
+      <div class="research-link">
+        Read Paper
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </div>
+    </a>
 
-                            <div class="card-image">
-                                <img src="images/cisco-logo-transparent.png" alt="" class="card-img">
-                            </div>
-                        </div>
+    <a href="./Reading/pdf/The%20Rise%20of%20Artificial%20Intelligence%20(1).pdf" target="_blank" rel="noreferrer" class="research-card glass fade-up" style="transition-delay:.14s">
+      <div class="research-card-glow"></div>
+      <div class="research-top">
+        <span class="research-icon gradient-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span>
+        <span class="research-year">2023</span>
+      </div>
+      <h3 class="research-title">Computer Vision on Constrained Hardware: A Comparative Study</h3>
+      <p class="research-desc">Evaluating YOLO variants, MobileNet, and EfficientDet on ARM processors — optimising for real-time object detection.</p>
+      <div class="research-tags">
+        <span class="research-tag">Computer Vision</span>
+        <span class="research-tag">YOLO</span>
+        <span class="research-tag">ARM</span>
+      </div>
+      <div class="research-link" >
+        Read Paper
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </div>
+    </a>
 
-                        <div class="card-content">
-                            <h2 class="name">Cisco Networking Academy</h2>
-                            <p class="description">My Cisco certifications cover a wide range of technologies, including Python, networking, cybersecurity, IoT, Packet Tracer, and Linux, demonstrating my comprehensive understanding of modern IT infrastructure.</p>
+  </div>
 
-                          <a href="https://drive.google.com/drive/folders/1wrPio388tA8A0Qu50G0Fn8R_7RNue6Rw?usp=sharing">  <button class="button" id="btn4">View Certifications</button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-5"></span>
+  <!-- View all button -->
+  <div class="research-cta fade-up">
+    <a href="./Reading/ResearchPapers.html" target="_blank" rel="noreferrer" class="btn-primary gradient-blue">
+      View All Research
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    </a>
+  </div>
+</section>
 
-                            <div class="card-image">
-                                <img src="images/Udemy_logo.svg.png" alt="" class="card-img">
-                            </div>
-                        </div>
+<!-- ══════════════════════════════════
+     CONTACT
+     ══════════════════════════════════ -->
+<section id="contact" aria-label="Contact">
+  <div class="contact-wrap glass-strong">
+    <div class="contact-grid">
 
-                        <div class="card-content">
-                            <h2 class="name">Udemy Academy</h2>
-                            <p class="description">> "My Udemy certifications showcase my diverse skillset, encompassing chatbot technology, MS Power BI for data visualization, web development with HTML, CSS, and Django, and programming with MicroPython and Python."</p>
+      <!-- Left info -->
+      <div class="contact-left">
+        <div class="contact-left-bg" aria-hidden="true"></div>
+        <div class="contact-left-content">
+          <div class="fade-up"><span class="contact-tag glass">Contact</span></div>
+          <div class="fade-up" style="transition-delay:.08s"><h2 class="contact-h2 gradient-text">Let's build something that matters.</h2></div>
+          <div class="fade-up" style="transition-delay:.15s"><p class="contact-desc">Whether it's an AI product, a robotics prototype, or an embedded system — drop a message and let's turn the idea into a working thing.</p></div>
 
-                           <a href="https://drive.google.com/drive/folders/1bf3Gx5seD9EUuKGNRDNSRypm__AILWZI?usp=sharing"> <button class="button" id="btn5">View Certifications</button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440">
-                        <div class="image-content">
-                            <span class="overlay" id="overlay-6"></span>
+          <div class="fade-up" style="transition-delay:.25s">
+            <a href="mailto:work.aryanbhad@gmail.com" class="contact-email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.24 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Work.aryanbhad@gmail.com
+            </a>
+          </div>
 
-                            <div class="card-image">
-                                <img src="images/MS.png" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">Microsoft Certified</h2>
-                            <p class="description">I'm also a Microsoft Certified Azure AI Engineer, demonstrating my expertise in cloud-based artificial intelligence solutions.</p>
-
-                           <a href="https://drive.google.com/drive/folders/1wHYto4kx5OXWz4ZY5ytFVj-BRd1O_AYp?usp=sharing"> <button class="button" id="btn6">View Certifications</button> </a>
-                        </div>
-                    </div>
-
-                </div>
+          <div class="fade-up" style="transition-delay:.32s">
+            <div class="socials">
+              <a href="https://github.com/aryan4044" target="_blank" rel="noreferrer" class="social-btn glass">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.24 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S9.08 17.44 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+              <a href="#" target="_blank" rel="noreferrer" class="social-btn glass">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.24 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="#" target="_blank" rel="noreferrer" class="social-btn glass">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.24 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                Instagram
+              </a>
+              <a href="https://www.youtube.com/@developeraryan2225" class="social-btn glass">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.24 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                YouTube
+              </a>
             </div>
-
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
+          </div>
         </div>
+      </div>
 
+      <!-- Right form -->
+      <div class="contact-right">
+        <form id="contact-form" novalidate>
+          <div class="form-field fade-up">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" id="name" type="text" required placeholder="Your name" />
+          </div>
+          <div class="form-field fade-up" style="transition-delay:.05s">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" type="email" required placeholder="you@domain.com" />
+          </div>
+          <div class="form-field fade-up" style="transition-delay:.1s">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" required rows="5" placeholder="Tell me about the build..."></textarea>
+          </div>
+          <div class="fade-up" style="transition-delay:.15s">
+            <button type="submit" class="btn-submit gradient-blue" id="submit-btn">
+              Send Message
+              <svg id="send-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
 
+    </div><!-- /contact-grid -->
+  </div><!-- /contact-wrap -->
+</section>
 
-        </div>
-    </section>
+<!-- ══════════════════════════════════
+     FOOTER
+     ══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="footer-badge gradient-blue">AB</span>
+      <div>
+        <div class="footer-name">Aryan Bhad</div>
+        <div class="footer-role">Robotics Builder · AI Engineer · Electronics</div>
+      </div>
+    </div>
 
-<!---------------------- Reading zone --------------->
+    <div class="footer-socials">
+      <a href="https://github.com/aryan4044" target="_blank" rel="noreferrer" aria-label="GitHub" class="footer-social glass">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S9.08 17.44 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aryan4044/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="footer-social glass">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.instagram.com/aryan_40444/" target="_blank" rel="noreferrer" aria-label="Instagram" class="footer-social glass">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      </a>
+      <a href="mailto:work.aryanbhad@gmail.com" aria-label="Email" class="footer-social glass">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
 
-    <section class="about" id="ReadingZone">
-        <div class="title reveal">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Reading Zone </h2>
-        </div>
-        <div class="ReadingZone-content">
+    <p class="footer-copy">© <span id="year"></span> Aryan Bhad. Crafted with intent.</p>
+  </div>
+</footer>
 
-            <div class="column col-right reveal">
-                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Welcome to the reading zone</h2>
-                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400"> I have three research papers covering diverse topics. One focuses on AI, specifically addressing the critical need for data in its development and application. Another explores RetroPie, likely delving into its functionalities, setup, or community aspects for retro gaming emulation. Your third paper investigates Entropy-Enhanced Random Number Generation, a topic crucial for cybersecurity, simulations, and cryptographic applications, highlighting methods to improve the randomness and unpredictability of generated numbers.
-                    Click the button below to redirect to the reading zone, where each paper is displayed properly and in a neat and clean manner.</p>
-                <a href="./Reading/ResearchPapers.html" class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">[Redirect to Reading Zone] </a>
-            </div>
-        </div>
-    </section>
+<!-- ══════════════════════════════════
+     SCRIPTS
+     Load order: images first (defines IMG_ vars), then app logic
+     ══════════════════════════════════ -->
+<script src="images.js"></script>
+<script src="script.js"></script>
 
-
-<!---------------------- Projects --------------------------->
-    <section class="projects" id="Projects">
-        <div class="center-text" data-aos="fade-cdown">
-            <h2>MY <span>Projects</span></h2>
-        </div>
-
-        <div class="project-content" data-aos="zoom-in-up">
-            <div class="row">
-                <img src="./Image/Projects/port-1.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5 >Facial expression recognization </h5>
-                    </div>
-                    <div class="row-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                </div>
-                <h4> traning a coustom ai model using yolo v11 to recognize facial expression </h4>
-            </div>
-
-
-            <div class="row">
-                <img src="./Image/Projects/port-2.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5>Cyber Car </h5>
-                    </div>
-                    <div class="row-icon">
-                        <a href="https://github.com/Aryan4044/cybercar"> <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <h4> A cool car that can sneak inside your property and deauth wifi networks </h4>
-            </div>
-
-
-            <div class="row">
-                <img src="./Image/Projects/port-3.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5>retropie </h5>
-                    </div>
-                    <div class="row-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                </div>
-                <h4> A pocket size gaming console holding many retro games </h4>
-            </div>
-
-
-            <div class="row">
-                <img src="./Image/Projects/port-4.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5>network pen tester </h5>
-                    </div>
-                    <div class="row-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                </div>
-                <h4> entire network pen testing to begin with within mint-box </h4>
-            </div>
-
-
-            <div class="row">
-                <img src="./Image/Projects/port-5.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5>Network fishing by beef </h5>
-                    </div>
-                    <div class="row-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                </div>
-                <h4> re-creating every famous webpage via beef-xss on kali linux </h4>
-            </div>
-
-
-            <div class="row">
-                <img src="./Image/Projects/port-6.jpg"alt="">
-                <div class="main-row">
-                    <div class=row-text">
-                        <h5> Node MCU Esp-8266 Rover !  </h5>
-                    </div>
-                    <div class="row-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                </div>
-                <h4> A classic rc car that uses wifi to communicate  </h4>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-
-    <section class="contact" id="contact">
-        <div class="title reveal">
-          <h2 class="section-title">Contact Me</h2>
-        </div>
-        <div class="content">
-          <div class="subrow">
-            <div class="card reveal">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info">
-                <h3>Address</h3>
-                <span>Maharashtra Akola 444001</span>
-              </div>
-            </div>
-            <div class="card reveal">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="info">
-                <h3>Phone</h3>
-                <span>+91 9284709411</span>
-              </div>
-            </div>
-            <div class="card reveal">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="info">
-                <h3>Email Address</h3>
-                <span>work.aryanbhad@gmail.com</span>
-              </div>
-            </div>
-
-              <div class="subrow">
-                  <div class="contact-form reveal">
-                      <h3>Send Message</h3>
-                      <form id="my-form" action="https://formspree.io/f/xnnjbqza" method="POST">
-                          <div class="input-box">
-                              <input type="text" name="name" placeholder="Name" required>
-                          </div>
-                          <div class="input-box">
-                              <input type="email" name="email" placeholder="Email" required>
-                          </div>
-                          <div class="input-box">
-                              <textarea name="message" rows="8" cols="80" placeholder="Message" required></textarea>
-                          </div>
-                          <div class="input-box">
-                              <button type="submit" class="send-btn">Send</button>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-
-
-        </div>
-      </section>
-  
-      <footer class="footer">
-        <span class="footer-title">Aryan4044</span>
-        <p>Copyright @2025 <a href="#
-https://github.com/Aryan4044/portfolio">Aryan Bhad</a>. All Rights Reserved.</p>
-      </footer>
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        const form = document.getElementById('my-form');
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const button = event.submitter;
-            button.disabled = true;
-            button.textContent = "Sending...";
-
-            const formData = new FormData(form);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    button.textContent = "Message Sent!";
-                    form.reset();
-                } else {
-                    const errorData = await response.json();
-                    console.error("Form submission error:", errorData);
-                    button.textContent = "Error Sending";
-                    alert("There was an error submitting the form. Please try again.");
-                }
-            } catch (error) {
-                console.error("Fetch error:", error);
-                button.textContent = "Error Sending";
-                alert("An error occurred. Please try again later.");
-            } finally {
-                button.disabled = false;
-            }
-        });
-    </script>
-    <script>
-      AOS.init({offset:0});
-    </script>
-    <script>
-
-        window.addEventListener("scroll", function(){
-    scrollBtn.classList.toggle("active", window.scrollY > 500);
-});
-
-//javascript for scroll back to top on click scroll-to-top button
-
-// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// });
-
-        const menuBtn = document.querySelector(".menu-btn");
-        const navigation = document.querySelector(".navigation");
-        const navigationItems = document.querySelector(".navigation a");
-
-        menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
-        })
-
-        // Navigation Effects
-        window.addEventListener("scroll", function(){
-            const header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-
-        navigationItems.forEach((navigationItem) => {
-            navigationItem.addEventListener("click", () => {
-                menuBtn.classList.remove("active");
-                navigation.classList.remove("active")
-            })
-        })
-
-
-
-    </script>
 </body>
-<!-- Swiper JS -->
-<script src="js/swiper-bundle.min.js"></script>
-
-<!-- JavaScript -->
-<script src="js/script.js"></script>
 </html>
